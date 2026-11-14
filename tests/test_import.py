@@ -1,10 +1,12 @@
+from importlib.metadata import version
+
 import mlx.core as mx
 
 import mlx_covi
 
 
 def test_version():
-    assert mlx_covi.__version__ != "0.0.0"
+    assert mlx_covi.__version__ == version("mlx-covi")
 
 
 def test_mlx_available():
